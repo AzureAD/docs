@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSALUser Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSAL </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Microsoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/displayableId">displayableId</option>
+		
+		<option value="//api/name/environment">environment</option>
+		
+		<option value="//api/name/identityProvider">identityProvider</option>
+		
+		<option value="//api/name/name">name</option>
+		
+		<option value="//api/name/uid">uid</option>
+		
+		<option value="//api/name/utid">utid</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithDisplayableId:name:identityProvider:uid:utid:environment:">- initWithDisplayableId:name:identityProvider:uid:utid:environment:</option>
+		
+		<option value="//api/name/initWithIdToken:clientInfo:environment:">- initWithIdToken:clientInfo:environment:</option>
+		
+		<option value="//api/name/userIdentifier">- userIdentifier</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSALUser Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MSALUser.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/displayableId" title="displayableId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/displayableId">&nbsp;&nbsp;displayableId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>The displayable value in UserPrincipleName(UPN) format. Can be nil if not returned from the service.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *displayableId</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>The displayable value in UserPrincipleName(UPN) format. Can be nil if not returned from the service.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>The given name of the user. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *name</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>The given name of the user. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/identityProvider" title="identityProvider"></a>
+	<h3 class="method-title"><code><a href="#//api/name/identityProvider">&nbsp;&nbsp;identityProvider</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>The identity provider of the user authenticated. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *identityProvider</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>The identity provider of the user authenticated. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/uid" title="uid"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uid">&nbsp;&nbsp;uid</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Unique identifier of the user. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *uid</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Unique identifier of the user. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/utid" title="utid"></a>
+	<h3 class="method-title"><code><a href="#//api/name/utid">&nbsp;&nbsp;utid</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Unique tenant identifier of the user. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *utid</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Unique tenant identifier of the user. Can be nil if not returned by the service.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/environment" title="environment"></a>
+	<h3 class="method-title"><code><a href="#//api/name/environment">&nbsp;&nbsp;environment</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Host part of the authority string used for authentication.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *environment</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Host part of the authority string used for authentication.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithIdToken:clientInfo:environment:" title="initWithIdToken:clientInfo:environment:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithIdToken:clientInfo:environment:">&ndash;&nbsp;initWithIdToken:clientInfo:environment:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Initialize a MSALUser by extracting information from id token and client info.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithIdToken:(MSALIdToken *)<em>idToken</em> clientInfo:(MSALClientInfo *)<em>clientInfo</em> environment:(NSString *)<em>environment</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idToken</code></th>
+						<td><p>A MSALIdToken object that holds information extracted from the raw id token</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>clientInfo</code></th>
+						<td><p>Client info returned by the service</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>environment</code></th>
+						<td><p>Host part of the authority string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Initialize a MSALUser by extracting information from id token and client info.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithDisplayableId:name:identityProvider:uid:utid:environment:" title="initWithDisplayableId:name:identityProvider:uid:utid:environment:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithDisplayableId:name:identityProvider:uid:utid:environment:">&ndash;&nbsp;initWithDisplayableId:name:identityProvider:uid:utid:environment:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Initialize a MSALUser with given information
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithDisplayableId:(NSString *)<em>displayableId</em> name:(NSString *)<em>name</em> identityProvider:(NSString *)<em>identityProvider</em> uid:(NSString *)<em>uid</em> utid:(NSString *)<em>utid</em> environment:(NSString *)<em>environment</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>displayableId</code></th>
+						<td><p>The displayable value in UserPrincipleName(UPN) format</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>The given <a href="#//api/name/name">name</a> of the user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>identityProvider</code></th>
+						<td><p>The identity provider of the user authenticated</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uid</code></th>
+						<td><p>Unique identifier of the user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>utid</code></th>
+						<td><p>Unique tenant identifier of the user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>environment</code></th>
+						<td><p>Host part of the authority string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Initialize a MSALUser with given information
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/userIdentifier" title="userIdentifier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userIdentifier">&ndash;&nbsp;userIdentifier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Returns the unique identifier of the user, which is a combination of uid and utid properties
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)userIdentifier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Returns the unique identifier of the user, which is a combination of uid and utid properties
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALUser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Microsoft. All rights reserved. Updated: 2017-05-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSALErrorCode Constants Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSAL </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Microsoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSALErrorCode Constants Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>MSALError.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    <h3 class="subsubtitle method-title">MSALErrorCode</h3>
+                    
+					
+					<div class="section section-overview">
+                        <pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+					</div>
+					
+					
+                    <div class="section">
+                        <!-- display enum values -->
+                        
+                        <h4 class="method-subtitle">Definition</h4>
+                        <code>typedef NS_ENUM(NSInteger, MSALErrorCode ) {<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInvalidParameter</a> = -42000,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorRedirectSchemeNotRegistered</a> = -42001,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInvalidRequest</a> = -42002,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInvalidClient</a> = -42003,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInteractionRequired</a> = -42100,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorMismatchedUser</a> = -42101,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorNoAuthorizationResponse</a> = -42102,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorBadAuthorizationResponse</a> = -42103,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorAuthorizationFailed</a> = -42104,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorNoAccessTokenInResponse</a> = -42105,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorTokenCacheItemFailure</a> = -42200,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorAmbiguousAuthority</a> = -42201,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorUserNotFound</a> = -42202,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorNoAccessTokensFound</a> = -42203,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorWrapperCacheFailure</a> = -42270,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorNetworkFailure</a> = -42300,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorUserCanceled</a> = -42400,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorSessionCanceled</a> = -42401,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInteractiveSessionAlreadyRunning</a> = -42402,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorNoViewController</a> = -42403,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInternal</a> = -42500,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInvalidState</a> = -42501,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSALErrorInvalidResponse</a> = -42600,<br>
+                            
+                            };</code>
+                    
+                    </div>
+                    
+                    <div class="section section-methods">
+                        <h4 class="method-subtitle">Constants</h4>
+                        <dl class="termdef">
+                            
+                            <dt><a name="" title="MSALErrorInvalidParameter"></a><code>MSALErrorInvalidParameter</code></dt>
+<dd>
+
+
+<pre><code>    A required parameter was not provided, or a passed in parameter was
+    invalid. See MSALErrorDescriptionKey for more information.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorRedirectSchemeNotRegistered"></a><code>MSALErrorRedirectSchemeNotRegistered</code></dt>
+<dd>
+
+
+<pre><code>    The required MSAL URL scheme is not registered in the app's info.plist.
+    The scheme should be "msal&lt;clientid&gt;"
+
+    e.g. an app with the client ID "abcde-12345-vwxyz-67890" would need to
+    register the scheme "msalabcde-12345-vwxyz-67890" and add the
+    following to the info.plist file:
+
+    &lt;key&gt;CFBundleURLTypes&lt;/key&gt;
+    &lt;array&gt;
+        &lt;dict&gt;
+            &lt;key&gt;CFBundleTypeRole&lt;/key&gt;
+            &lt;string&gt;Editor&lt;/string&gt;
+            &lt;key&gt;CFBundleURLName&lt;/key&gt;
+            &lt;string&gt;$(PRODUCT_BUNDLE_IDENTIFIER)&lt;/string&gt;
+            &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+            &lt;array&gt;
+                &lt;string&gt;msalabcde-12345-vwxyz-67890&lt;/string&gt;
+            &lt;/array&gt;
+        &lt;/dict&gt;
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorInvalidRequest"></a><code>MSALErrorInvalidRequest</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorInvalidClient"></a><code>MSALErrorInvalidClient</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorInteractionRequired"></a><code>MSALErrorInteractionRequired</code></dt>
+<dd>
+
+
+<pre><code>    Interaction required errors occur because of a wide variety of errors
+    returned by the authentication service. In all cases the proper response
+    is to use a MSAL interactive AcquireToken call with the same parameters.
+    For more details check MSALOAuthErrorKey and MSALOAuthErrorDescriptionKey
+    in the userInfo dictionary.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorMismatchedUser"></a><code>MSALErrorMismatchedUser</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorNoAuthorizationResponse"></a><code>MSALErrorNoAuthorizationResponse</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorBadAuthorizationResponse"></a><code>MSALErrorBadAuthorizationResponse</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorAuthorizationFailed"></a><code>MSALErrorAuthorizationFailed</code></dt>
+<dd>
+
+
+<pre><code>    The user or application failed to authenticate in the interactive flow.
+    Inspect MSALOAuthErrorKey and MSALErrorDescriptionKey in the userInfo
+    dictionary for more detailed information about the specific error.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorNoAccessTokenInResponse"></a><code>MSALErrorNoAccessTokenInResponse</code></dt>
+<dd>
+
+
+<pre><code>    MSAL received a valid token response, but it didn't contain an access token.
+    Check to make sure your application is consented to get all of the scopes you are asking for.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorTokenCacheItemFailure"></a><code>MSALErrorTokenCacheItemFailure</code></dt>
+<dd>
+
+
+<pre><code>    MSAL encounted an error when trying to store or retrieve items from
+    keychain. Inspect NSUnderlyingError from the userInfo dictionary for
+    more information about the specific error. Keychain error codes are
+    documented in Apple's &lt;Security/SecBase.h&gt; header file
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorAmbiguousAuthority"></a><code>MSALErrorAmbiguousAuthority</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorUserNotFound"></a><code>MSALErrorUserNotFound</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorNoAccessTokensFound"></a><code>MSALErrorNoAccessTokensFound</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorWrapperCacheFailure"></a><code>MSALErrorWrapperCacheFailure</code></dt>
+<dd>
+
+
+<pre><code>The extded error description. Note that this string can change ands should
+not be relied upon for any error handling logic.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorNetworkFailure"></a><code>MSALErrorNetworkFailure</code></dt>
+<dd>
+
+
+<pre><code>    MSAL encounted a network error while trying to authenticate. Inspect
+    NSUnderlyingError from the userInfo dictionary for more information
+    about the specific error. In most cases the errors will come from the
+    system's network layer and the individual errors will be detailed in
+    Apple's &lt;Foundation/NSURLError.h&gt; header file.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorUserCanceled"></a><code>MSALErrorUserCanceled</code></dt>
+<dd>
+
+
+<pre><code>    The user cancelled the web auth session by tapping the "Done" button on the
+    SFSafariViewController.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorSessionCanceled"></a><code>MSALErrorSessionCanceled</code></dt>
+<dd>
+
+
+<pre><code>    The authentication request was cancelled programmatically.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorInteractiveSessionAlreadyRunning"></a><code>MSALErrorInteractiveSessionAlreadyRunning</code></dt>
+<dd>
+
+
+<pre><code>    An interactive authentication session is already running with the
+    SafariViewController visible. Another authentication session can not be
+    launched yet.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorNoViewController"></a><code>MSALErrorNoViewController</code></dt>
+<dd>
+
+
+<pre><code>    MSAL could not find the current view controller in the view controller
+    heirarchy to display the SFSafariViewController on top of.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorInternal"></a><code>MSALErrorInternal</code></dt>
+<dd>
+
+
+<pre><code>    An error ocurred within the MSAL client, inspect the MSALErrorDescriptionKey
+    in the userInfo dictionary for more detailed information about the specific
+    error.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorInvalidState"></a><code>MSALErrorInvalidState</code></dt>
+<dd>
+
+
+<pre><code>    The state returned by the server does not match the state that was sent to
+    the server at the beginning of the authorization attempt.
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSALErrorInvalidResponse"></a><code>MSALErrorInvalidResponse</code></dt>
+<dd>
+
+
+<pre><code> Response was received in a network call, but the response body was invalid.
+
+ e.g. Response was to be expected a key-value pair with "key1" and
+ the json response does not contain "key1" elements
+</code></pre>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSALError.h</code>.
+	</p>
+	
+</dd>
+                            
+                        </dl>
+                    </div>
+                    
+
+                    
+                    
+
+                    
+
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <p><code class="declared-in-ref">MSALError.h</code></p>
+                    </div>
+                    
+                    
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Microsoft. All rights reserved. Updated: 2017-05-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

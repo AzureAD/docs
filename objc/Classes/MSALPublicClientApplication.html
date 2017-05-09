@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSALPublicClientApplication Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSAL </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Microsoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/authority">authority</option>
+		
+		<option value="//api/name/clientId">clientId</option>
+		
+		<option value="//api/name/component">component</option>
+		
+		<option value="//api/name/redirectUri">redirectUri</option>
+		
+		<option value="//api/name/sliceParameters">sliceParameters</option>
+		
+		<option value="//api/name/validateAuthority">validateAuthority</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/cancelCurrentWebAuthSession">+ cancelCurrentWebAuthSession</option>
+		
+		<option value="//api/name/handleMSALResponse:">+ handleMSALResponse:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/acquireTokenForScopes:completionBlock:">- acquireTokenForScopes:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenForScopes:extraScopesToConsent:loginHint:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:">- acquireTokenForScopes:extraScopesToConsent:loginHint:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenForScopes:extraScopesToConsent:user:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:">- acquireTokenForScopes:extraScopesToConsent:user:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenForScopes:loginHint:completionBlock:">- acquireTokenForScopes:loginHint:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenForScopes:loginHint:uiBehavior:extraQueryParameters:completionBlock:">- acquireTokenForScopes:loginHint:uiBehavior:extraQueryParameters:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenForScopes:user:completionBlock:">- acquireTokenForScopes:user:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenForScopes:user:uiBehavior:extraQueryParameters:completionBlock:">- acquireTokenForScopes:user:uiBehavior:extraQueryParameters:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenSilentForScopes:user:authority:completionBlock:">- acquireTokenSilentForScopes:user:authority:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenSilentForScopes:user:authority:forceRefresh:correlationId:completionBlock:">- acquireTokenSilentForScopes:user:authority:forceRefresh:correlationId:completionBlock:</option>
+		
+		<option value="//api/name/acquireTokenSilentForScopes:user:completionBlock:">- acquireTokenSilentForScopes:user:completionBlock:</option>
+		
+		<option value="//api/name/initWithClientId:authority:error:">- initWithClientId:authority:error:</option>
+		
+		<option value="//api/name/initWithClientId:error:">- initWithClientId:error:</option>
+		
+		<option value="//api/name/removeUser:error:">- removeUser:error:</option>
+		
+		<option value="//api/name/userForIdentifier:error:">- userForIdentifier:error:</option>
+		
+		<option value="//api/name/users:">- users:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSALPublicClientApplication Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MSALPublicClientApplication.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/validateAuthority" title="validateAuthority"></a>
+	<h3 class="method-title"><code><a href="#//api/name/validateAuthority">&nbsp;&nbsp;validateAuthority</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>When set to YES (default), MSAL will compare the application's authority against well-known URLs
+templates representing well-formed authorities. It is useful when the authority is obtained at
+run time to prevent MSAL from displaying authentication prompts from malicious pages.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property BOOL validateAuthority</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>When set to YES (default), MSAL will compare the application's authority against well-known URLs
+templates representing well-formed authorities. It is useful when the authority is obtained at
+run time to prevent MSAL from displaying authentication prompts from malicious pages.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/authority" title="authority"></a>
+	<h3 class="method-title"><code><a href="#//api/name/authority">&nbsp;&nbsp;authority</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The authority the application will use to obtain tokens</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSURL *authority</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The authority the application will use to obtain tokens</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clientId" title="clientId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clientId">&nbsp;&nbsp;clientId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The client ID of the application, this should come from the app developer portal.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *clientId</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The client ID of the application, this should come from the app developer portal.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/redirectUri" title="redirectUri"></a>
+	<h3 class="method-title"><code><a href="#//api/name/redirectUri">&nbsp;&nbsp;redirectUri</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The redirect URI of the application</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSURL *redirectUri</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The redirect URI of the application</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sliceParameters" title="sliceParameters"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sliceParameters">&nbsp;&nbsp;sliceParameters</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Used to specify query parameters that must be passed to both the authorize and token endpoints
+to target MSAL at a specific test slice &amp; flight. These apply to all requests made by an application.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property NSDictionary&lt;NSString*NSString*&gt; *sliceParameters</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Used to specify query parameters that must be passed to both the authorize and token endpoints
+to target MSAL at a specific test slice &amp; flight. These apply to all requests made by an application.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/component" title="component"></a>
+	<h3 class="method-title"><code><a href="#//api/name/component">&nbsp;&nbsp;component</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used in logging callbacks to identify what component in the application
+    called MSAL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property NSString *component</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used in logging callbacks to identify what component in the application
+    called MSAL.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithClientId:error:" title="initWithClientId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithClientId:error:">&ndash;&nbsp;initWithClientId:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Initialize a MSALPublicClientApplication with a given clientID
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithClientId:(NSString *)<em>clientId</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>clientId</code></th>
+						<td><p>The clientID of your application, you should get this from the app portal.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occurred creating the application object, if any (optional)</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Initialize a MSALPublicClientApplication with a given clientID
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithClientId:authority:error:" title="initWithClientId:authority:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithClientId:authority:error:">&ndash;&nbsp;initWithClientId:authority:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Initialize a MSALPublicClientApplication with a given clientID and authority
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithClientId:(NSString *)<em>clientId</em> authority:(NSString *)<em>authority</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>clientId</code></th>
+						<td><p>The clientID of your application, you should get this from the app portal.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>authority</code></th>
+						<td><p>A URL indicating a directory that MSAL can use to obtain tokens. In Azure AD
+                        it is of the form https://&lt;instance/<tenant>, where <instance> is the
+                        directory host (e.g. <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>) and <tenant> is a
+                        identifier within the directory itself (e.g. a domain associated to the
+                        tenant, such as contoso.onmicrosoft.com, or the GUID representing the
+                        TenantID property of the directory)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occurred creating the application object, if any, if you&rsquo;re
+                        not interested in the specific error pass in nil.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Initialize a MSALPublicClientApplication with a given clientID and authority
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/users:" title="users:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/users:">&ndash;&nbsp;users:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Returns an array of users visible to this application
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;MSALUser*&gt; *)users:(NSError *__autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occured trying to retrieve users, if any, if you&rsquo;re
+                    not interested in the specific error pass in nil.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Returns an array of users visible to this application
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/userForIdentifier:error:" title="userForIdentifier:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userForIdentifier:error:">&ndash;&nbsp;userForIdentifier:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Returns a specific user for the identifier given (received from a user object returned
+in a previous acquireToken call)
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (MSALUser *)userForIdentifier:(NSString *)<em>identifier</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occured trying to the user, if any, if you&rsquo;re
+                    not interested in the specific error pass in nil.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Returns a specific user for the identifier given (received from a user object returned
+in a previous acquireToken call)
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/handleMSALResponse:" title="handleMSALResponse:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/handleMSALResponse:">+&nbsp;handleMSALResponse:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Ask MSAL to handle a URL response.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)handleMSALResponse:(NSURL *)<em>response</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>response</code></th>
+						<td><p>URL response from your application delegate&rsquo;s openURL handler into
+                        MSAL for web authentication sessions</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if URL is a response to a MSAL web authentication session and handled,
+             NO otherwise.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Ask MSAL to handle a URL response.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelCurrentWebAuthSession" title="cancelCurrentWebAuthSession"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelCurrentWebAuthSession">+&nbsp;cancelCurrentWebAuthSession</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Cancels any currently running interactive web authentication session, resulting
+in the SafariViewController being dismissed and the acquireToken request ending
+in a cancelation error.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)cancelCurrentWebAuthSession</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Cancels any currently running interactive web authentication session, resulting
+in the SafariViewController being dismissed and the acquireToken request ending
+in a cancelation error.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenForScopes:completionBlock:" title="acquireTokenForScopes:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenForScopes:completionBlock:">&ndash;&nbsp;acquireTokenForScopes:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                            in the result in the completionBlock. Not all scopes are
+                            gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                            flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenForScopes:loginHint:completionBlock:" title="acquireTokenForScopes:loginHint:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenForScopes:loginHint:completionBlock:">&ndash;&nbsp;acquireTokenForScopes:loginHint:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> loginHint:(NSString *)<em>loginHint</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                            in the result in the completionBlock. Not all scopes are
+                            gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>loginHint</code></th>
+						<td><p>A loginHint (usually an email) to pass to the service at the
+                            beginning of the interactive authentication flow. The user returned
+                            in the completion block is not guaranteed to match the loginHint.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                            flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenForScopes:loginHint:uiBehavior:extraQueryParameters:completionBlock:" title="acquireTokenForScopes:loginHint:uiBehavior:extraQueryParameters:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenForScopes:loginHint:uiBehavior:extraQueryParameters:completionBlock:">&ndash;&nbsp;acquireTokenForScopes:loginHint:uiBehavior:extraQueryParameters:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> loginHint:(NSString *)<em>loginHint</em> uiBehavior:(MSALUIBehavior)<em>uiBehavior</em> extraQueryParameters:(NSDictionary&lt;NSString*,NSString*&gt; *)<em>extraQueryParameters</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                            in the result in the completionBlock. Not all scopes are
+                            gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>loginHint</code></th>
+						<td><p>A loginHint (usually an email) to pass to the service at the
+                            beginning of the interactive authentication flow. The user returned
+                            in the completion block is not guaranteed to match the loginHint.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uiBehavior</code></th>
+						<td><p>A specific UI behavior for the interactive authentication flow</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extraQueryParameters</code></th>
+						<td><p>Key-value pairs to pass to the authentication server during
+                                    the interactive authentication flow.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                            flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenForScopes:extraScopesToConsent:loginHint:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:" title="acquireTokenForScopes:extraScopesToConsent:loginHint:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenForScopes:extraScopesToConsent:loginHint:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:">&ndash;&nbsp;acquireTokenForScopes:extraScopesToConsent:loginHint:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> extraScopesToConsent:(NSArray&lt;NSString*&gt; *)<em>extraScopesToConsent</em> loginHint:(NSString *)<em>loginHint</em> uiBehavior:(MSALUIBehavior)<em>uiBehavior</em> extraQueryParameters:(NSDictionary&lt;NSString*,NSString*&gt; *)<em>extraQueryParameters</em> authority:(NSString *)<em>authority</em> correlationId:(NSUUID *)<em>correlationId</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                                    in the result in the completionBlock. Not all scopes are
+                                    gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extraScopesToConsent</code></th>
+						<td><p>Permissions you want the user to consent to in the same
+                                    authentication flow, but won&rsquo;t be included in the returned
+                                    access token</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>loginHint</code></th>
+						<td><p>A loginHint (usually an email) to pass to the service at the
+                                    beginning of the interactive authentication flow. The user returned
+                                    in the completion block is not guaranteed to match the loginHint.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uiBehavior</code></th>
+						<td><p>A UI behavior for the interactive authentication flow</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extraQueryParameters</code></th>
+						<td><p>Key-value pairs to pass to the authentication server during
+                                    the interactive authentication flow.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>authority</code></th>
+						<td><p>A URL indicating a directory that MSAL can use to obtain tokens. Azure AD
+                                    it is of the form https://&lt;instance/<tenant>, where <instance> is the
+                                    directory host (e.g. <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>) and <tenant> is a
+                                    identifier within the directory itself (e.g. a domain associated to the
+                                    tenant, such as contoso.onmicrosoft.com, or the GUID representing the
+                                    TenantID property of the directory)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>correlationId</code></th>
+						<td><p>UUID to correlate this request with the server</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                                    flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token for a new user using interactive authentication
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenForScopes:user:completionBlock:" title="acquireTokenForScopes:user:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenForScopes:user:completionBlock:">&ndash;&nbsp;acquireTokenForScopes:user:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token interactively for an existing user. This is typically used after receiving
+a MSALErrorInteractionRequired error.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> user:(MSALUser *)<em>user</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                            in the result in the completionBlock. Not all scopes are
+                            gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>user</code></th>
+						<td><p>A user object retrieved from the application object that the
+                            interactive authentication flow will be locked down to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                            flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token interactively for an existing user. This is typically used after receiving
+a MSALErrorInteractionRequired error.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenForScopes:user:uiBehavior:extraQueryParameters:completionBlock:" title="acquireTokenForScopes:user:uiBehavior:extraQueryParameters:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenForScopes:user:uiBehavior:extraQueryParameters:completionBlock:">&ndash;&nbsp;acquireTokenForScopes:user:uiBehavior:extraQueryParameters:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token interactively for an existing user. This is typically used after receiving
+a MSALErrorInteractionRequired error.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> user:(MSALUser *)<em>user</em> uiBehavior:(MSALUIBehavior)<em>uiBehavior</em> extraQueryParameters:(NSDictionary&lt;NSString*,NSString*&gt; *)<em>extraQueryParameters</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                                    in the result in the completionBlock. Not all scopes are
+                                    gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>user</code></th>
+						<td><p>A user object retrieved from the application object that the
+                                    interactive authentication flow will be locked down to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uiBehavior</code></th>
+						<td><p>A UI behavior for the interactive authentication flow</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extraQueryParameters</code></th>
+						<td><p>Key-value pairs to pass to the authentication server during
+                                    the interactive authentication flow.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                                    flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token interactively for an existing user. This is typically used after receiving
+a MSALErrorInteractionRequired error.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenForScopes:extraScopesToConsent:user:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:" title="acquireTokenForScopes:extraScopesToConsent:user:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenForScopes:extraScopesToConsent:user:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:">&ndash;&nbsp;acquireTokenForScopes:extraScopesToConsent:user:uiBehavior:extraQueryParameters:authority:correlationId:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token interactively for an existing user. This is typically used after receiving
+a MSALErrorInteractionRequired error.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> extraScopesToConsent:(NSArray&lt;NSString*&gt; *)<em>extraScopesToConsent</em> user:(MSALUser *)<em>user</em> uiBehavior:(MSALUIBehavior)<em>uiBehavior</em> extraQueryParameters:(NSDictionary&lt;NSString*,NSString*&gt; *)<em>extraQueryParameters</em> authority:(NSString *)<em>authority</em> correlationId:(NSUUID *)<em>correlationId</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                                    in the result in the completionBlock. Not all scopes are
+                                    gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extraScopesToConsent</code></th>
+						<td><p>Permissions you want the user to consent to in the same
+                                    authentication flow, but won&rsquo;t be included in the returned
+                                    access token</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>user</code></th>
+						<td><p>A user object retrieved from the application object that the
+                                    interactive authentication flow will be locked down to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uiBehavior</code></th>
+						<td><p>A UI behavior for the interactive authentication flow</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extraQueryParameters</code></th>
+						<td><p>Key-value pairs to pass to the authentication server during
+                                    the interactive authentication flow.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>authority</code></th>
+						<td><p>A URL indicating a directory that MSAL can use to obtain tokens.
+                                    Azure AD it is of the form https://&lt;instance/<tenant>, where
+                                    <instance> is the directory host
+                                    (e.g. <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>) and <tenant> is a
+                                    identifier within the directory itself (e.g. a domain associated
+                                    to the tenant, such as contoso.onmicrosoft.com, or the GUID
+                                    representing the TenantID property of the directory)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>correlationId</code></th>
+						<td><p>UUID to correlate this request with the server</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                                    flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token interactively for an existing user. This is typically used after receiving
+a MSALErrorInteractionRequired error.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenSilentForScopes:user:completionBlock:" title="acquireTokenSilentForScopes:user:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenSilentForScopes:user:completionBlock:">&ndash;&nbsp;acquireTokenSilentForScopes:user:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token silently for an existing user.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenSilentForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> user:(MSALUser *)<em>user</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                            in the result in the completionBlock. Not all scopes are
+                            gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>user</code></th>
+						<td><p>A user object retrieved from the application object that the
+                            interactive authentication flow will be locked down to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                            flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token silently for an existing user.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenSilentForScopes:user:authority:completionBlock:" title="acquireTokenSilentForScopes:user:authority:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenSilentForScopes:user:authority:completionBlock:">&ndash;&nbsp;acquireTokenSilentForScopes:user:authority:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token silently for an existing user.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenSilentForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> user:(MSALUser *)<em>user</em> authority:(NSString *)<em>authority</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Permissions you want included in the access token received
+                                    in the result in the completionBlock. Not all scopes are
+                                    gauranteed to be included in the access token returned.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>user</code></th>
+						<td><p>A user object retrieved from the application object that the
+                                    interactive authentication flow will be locked down to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>authority</code></th>
+						<td><p>A URL indicating a directory that MSAL can use to obtain tokens.
+                                    Azure AD it is of the form https://&lt;instance/<tenant>, where
+                                    <instance> is the directory host
+                                    (e.g. <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>) and <tenant> is a
+                                    identifier within the directory itself (e.g. a domain associated
+                                    to the tenant, such as contoso.onmicrosoft.com, or the GUID
+                                    representing the TenantID property of the directory)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                                    flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token silently for an existing user.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acquireTokenSilentForScopes:user:authority:forceRefresh:correlationId:completionBlock:" title="acquireTokenSilentForScopes:user:authority:forceRefresh:correlationId:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acquireTokenSilentForScopes:user:authority:forceRefresh:correlationId:completionBlock:">&ndash;&nbsp;acquireTokenSilentForScopes:user:authority:forceRefresh:correlationId:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Acquire a token silently for an existing user.
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acquireTokenSilentForScopes:(NSArray&lt;NSString*&gt; *)<em>scopes</em> user:(MSALUser *)<em>user</em> authority:(NSString *)<em>authority</em> forceRefresh:(BOOL)<em>forceRefresh</em> correlationId:(NSUUID *)<em>correlationId</em> completionBlock:(MSALCompletionBlock)<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scopes</code></th>
+						<td><p>Scopes to request from the server, the scopes that come back
+                                    can differ from the ones in the original call</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>user</code></th>
+						<td><p>A user object retrieved from the application object that the
+                                    interactive authentication flow will be locked down to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>authority</code></th>
+						<td><p>A URL indicating a directory that MSAL can use to obtain tokens.
+                                    Azure AD it is of the form https://&lt;instance/<tenant>, where
+                                    <instance> is the directory host
+                                    (e.g. <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>) and <tenant> is a
+                                    identifier within the directory itself (e.g. a domain associated
+                                    to the tenant, such as contoso.onmicrosoft.com, or the GUID
+                                    representing the TenantID property of the directory)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>Ignore any existing access token in the cache and force MSAL to
+                                    get a new access token from the service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>correlationId</code></th>
+						<td><p>UUID to correlate this request with the server</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionBlock</code></th>
+						<td><p>The completion block that will be called when the authentication
+                                    flow completes, or encounters an error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Acquire a token silently for an existing user.
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeUser:error:" title="removeUser:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeUser:error:">&ndash;&nbsp;removeUser:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>Removes all tokens from the cache for this application for the provided user
+</code></pre>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)removeUser:(MSALUser *)<em>user</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>user</code></th>
+						<td><p>The user to remove from the cache</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>Removes all tokens from the cache for this application for the provided user
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSALPublicClientApplication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Microsoft. All rights reserved. Updated: 2017-05-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
